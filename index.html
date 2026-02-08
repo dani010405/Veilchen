@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
-        <title>Veilchen</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+    <title>Veilchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
+<body>
+
+<!-- BACKGROUND CLOUDS -->
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+<!-- FOREGROUND CONTENT -->
+<div class="container">
+    <div id="header">
+        <span id="user-details">
+            <img id="profile" src="images/user.jpg" alt="User Profile" width="30px">
+            <span id="deets">
+                <p id="user">user</p>
+                <p id="saicey">SAICEY</p>
+            </span>
+        </span>  
         
-    </body>
+        <span>
+            <button type="button" id="button1" class="button">‹</button>
+            <button type="button" id="button2" class="button">›</button>
+            <button type="button" id="button3">✕</button>
+        </span>
+    </div>
+
+    <!-- LOCKSCREEN -->
+    <section id="lockscreen" class="screen">
+        <div class="time">06:26 PM</div>
+        <div class="date">January 8, 2026</div>
+
+        <div class="notif">
+            <span id="notif-head">
+                <span>
+                    <img src="images/message.png" width="15px" alt="">
+                    <strong>ely messaged you.</strong>
+                </span>
+                <p>Now</p>
+            </span>
+            <span id="snippet">
+                <p id="salutation">To my dearest, Saicey S. Sanglitan,</p>
+                <p id="body">I hope this letter finds you well. This is the...</p>
+            </span>
+        </div>
+
+        <p id="caret">^</p>
+        <button type="button" class="primary" id="unlockBtn">Unlock with Password</button>
+    </section>
+
+    <!-- PASSWORD -->
+    <section id="password" class="screen">
+        <p class="hint">Enter your full name</p>
+        <input type="text" id="passwordInput" placeholder="_________________________________">
+        <button type="button" class="primary" id="submitPassword">Unlock</button>
+        <p class="error" id="errorMsg"></p>
+    </section>
+
+    <!-- CHAT -->
+    <section id="chat" class="screen">
+        <div class="music">
+            <div>
+                <img id="cover" src="images/music.jpg" alt="cover" width="200px">
+                <span id="player">
+                    <span>
+                        <p class="song">Kabisado</p>
+                        <p class="artist">IV OF SPADES</p>
+                    </span>
+                    <button type="button" id="playPause">
+                        <img src="images/play.png" alt="" width="35px" style="filter: invert(100%);">
+                    </button>
+                </span>
+            </div>
+            <audio id="audio" src="music/Kabisado - IV OF SPADES.mp3"></audio>
+        </div>
+
+        <div id="convo">
+            <div id="info">
+                <p class="song">Ely Nollora</p>
+                <p style="font-size: small; color: rgb(26, 26, 26);">February 8, 2026</p>
+            </div>
+
+            <span id="pfp">
+                <img src="images/koga.jpg" alt="" width="30px" style="border-radius: 50px; border: solid black 2px;">
+                <div>
+                    <div class="chatbox" id="chatbox"></div>
+                    <div class="chatfooter"></div>
+                </div>
+            </span>
+
+            <span id="options">
+                <img src="images/koga.jpg" alt="" width="30px" style="border-radius: 50px; border: solid black 2px; margin-right: 10px;">
+                <div class="choices">
+                    <button type="button" id="yesBtn">YES</button><button type="button" id="noBtn">NO</button>
+                    <div class="chatfooter"></div>
+                </div> 
+            </span>
+        </div>
+    </section>
+
+    <!-- FINAL (placeholder) -->
+    <section id="final" class="screen"></section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
